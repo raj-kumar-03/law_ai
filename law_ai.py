@@ -183,7 +183,6 @@ def get_download_link(text, filename, link_text):
 
 def setup_ui():
     """Set up the Streamlit user interface"""
-    st.set_page_config(page_title="Legal Document Summarizer", layout="wide")
     st.title("Legal Document Summarizer")
 
     # Initialize session state variables
