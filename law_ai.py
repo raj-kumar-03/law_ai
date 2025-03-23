@@ -9,7 +9,6 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 import fitz
 import base64
 import datetime
-from dotenv import load_dotenv
 import tempfile
 import google.generativeai as genai
 import os
