@@ -16,25 +16,20 @@ import warnings
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-"""
-load_dotenv() 
+# ✅ Set Page Config as the first Streamlit command
+st.set_page_config(page_title="Legal Document Summarizer", layout="wide")
 
-api_key = os.getenv("GOOGLE_API_KEY")
-if not api_key:
-    raise ValueError("Missing GOOGLE_API_KEY environment variable")
-
-genai.configure(api_key=api_key) """
-
-#For using Streamlit Secrets
-
-# Retrieve API key from Streamlit Secrets
-api_key = st.secrets["GOOGLE_API_KEY"]
+# ✅ Retrieve API key from Streamlit Secrets
+api_key = st.secrets.get("GOOGLE_API_KEY")
 
 if not api_key:
     raise ValueError("Missing GOOGLE_API_KEY in Streamlit Secrets")
 
-# Configure Google Generative AI
+# ✅ Configure Google Generative AI
 genai.configure(api_key=api_key)
+
+# ✅ Continue with your app logic
+st.title("Legal Document Summarizer")
 
 
 class LegalSummarizer:
