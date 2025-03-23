@@ -14,9 +14,10 @@ import google.generativeai as genai
 import os
 import warnings
 
+# ✅ Ignore DeprecationWarnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-# ✅ Set Page Config as the first Streamlit command
+# ✅ Set Page Config as the very first Streamlit command
 st.set_page_config(page_title="Legal Document Summarizer", layout="wide")
 
 # ✅ Retrieve API key from Streamlit Secrets
@@ -27,9 +28,6 @@ if not api_key:
 
 # ✅ Configure Google Generative AI
 genai.configure(api_key=api_key)
-
-# ✅ Continue with your app logic
-st.title("Legal Document Summarizer")
 
 
 class LegalSummarizer:
