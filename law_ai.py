@@ -17,14 +17,26 @@ import warnings
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-
+"""
 load_dotenv() 
 
 api_key = os.getenv("GOOGLE_API_KEY")
 if not api_key:
     raise ValueError("Missing GOOGLE_API_KEY environment variable")
 
+genai.configure(api_key=api_key) """
+
+#For using Streamlit Secrets
+
+# Retrieve API key from Streamlit Secrets
+api_key = st.secrets["GOOGLE_API_KEY"]
+
+if not api_key:
+    raise ValueError("Missing GOOGLE_API_KEY in Streamlit Secrets")
+
+# Configure Google Generative AI
 genai.configure(api_key=api_key)
+
 
 class LegalSummarizer:
     def __init__(self):
