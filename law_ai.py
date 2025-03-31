@@ -17,14 +17,20 @@ import warnings
 # ✅ Ignore DeprecationWarnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-# ✅ Set Page Config as the very first Streamlit command
 st.set_page_config(page_title="Legal Document Summarizer", layout="wide")
 
 # ✅ Retrieve API key from Streamlit Secrets
 api_key = st.secrets.get("GOOGLE_API_KEY")
 
+
 if not api_key:
     raise ValueError("Missing GOOGLE_API_KEY in Streamlit Secrets")
+#If Running in local Machine
+'''load_dotenv() 
+
+api_key = os.getenv("GOOGLE_API_KEY")
+if not api_key:
+    raise ValueError("Missing GOOGLE_API_KEY environment variable")'''
 
 # ✅ Configure Google Generative AI
 genai.configure(api_key=api_key)
