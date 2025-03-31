@@ -52,36 +52,40 @@ A Streamlit application that leverages LangChain and Google's Gemini AI to analy
    pip install -r requirements.txt
    ```
 
-4.Set up your Google API key:
+4. Set up your Google API key:
 
-  **Option 1: Using Streamlit Secrets (Recommended for Deployment)**
-    - Create a `.streamlit/secrets.toml` file with:
-      ```
-      GOOGLE_API_KEY = "your_google_api_key_here"
-      ```
+**Option 1: Using Streamlit Secrets (Recommended for Deployment)**
+- Create a `.streamlit/secrets.toml` file with:
+  ```
+  GOOGLE_API_KEY = "your_google_api_key_here"
+  ```
 
-  **Option 2: Using Environment Variables (Local Development)**
-    - Create a `.env` file in the project root with:
-      ```
-      GOOGLE_API_KEY=your_google_api_key_here
-      ```
-    - Uncomment the following lines in the code:
-      ```python
-      # If Running in local Machine
-      load_dotenv() 
-      api_key = os.getenv("GOOGLE_API_KEY")
-      if not api_key:
-          raise ValueError("Missing GOOGLE_API_KEY environment variable")
-      ```
-    - Comment out the Streamlit Secrets section:
-      ```python
-      # ✅ Retrieve API key from Streamlit Secrets
-      # api_key = st.secrets.get("GOOGLE_API_KEY")
-      # if not api_key:
-      #     raise ValueError("Missing GOOGLE_API_KEY in Streamlit Secrets")
-      ```
+**Option 2: Using Environment Variables (Local Development)**
+- Create a `.env` file in the project root with:
+  ```
+  GOOGLE_API_KEY=your_google_api_key_here
+  ```
+- Uncomment the following lines in the code:
+  ```python
+  # If Running in local Machine
+  load_dotenv() 
+  api_key = os.getenv("GOOGLE_API_KEY")
+  if not api_key:
+      raise ValueError("Missing GOOGLE_API_KEY environment variable")
+  ```
+- Comment out the Streamlit Secrets section:
+  ```python
+  # ✅ Retrieve API key from Streamlit Secrets
+  # api_key = st.secrets.get("GOOGLE_API_KEY")
+  # if not api_key:
+  #     raise ValueError("Missing GOOGLE_API_KEY in Streamlit Secrets")
+  ```
 
-  - Sign up for a [Google AI Studio](https://ai.google.dev/) account to get an API key
+- Sign up for a [Google AI Studio](https://ai.google.dev/) account to get an API key
+
+## Usage
+
+1. Run the Streamlit application:
 
 ## Usage
 
