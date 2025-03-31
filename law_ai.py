@@ -505,7 +505,7 @@ def sidebar_content():
     st.sidebar.markdown("🚀 **Legal Document Summarizer** powered by LangChain and Gemini")
     st.sidebar.markdown("💡 Developed with passion and always open to new opportunities!")
     st.sidebar.markdown("📩 **[Contact Me](mailto:raj251003@gmail.com)**") 
-    st.sidebar.markdown("🌐 **[Lets Speak](https://github.com/raj-kumar-03)**")  
+    st.sidebar.markdown("🌐 **[Lets Speak](https://www.linkedin.com/in/raj-kumar-372b75320/)**")  
     st.sidebar.markdown("🌐 **[Check out my projects](https://github.com/raj-kumar-03)**")  
 
 
