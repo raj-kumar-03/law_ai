@@ -35,14 +35,16 @@ A Streamlit application that leverages LangChain and Google's Gemini AI to analy
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/legal-document-summarizer.git
-   cd legal-document-summarizer
+   git clone https://github.com/raj-kumar-03/law_ai.git
+   cd law_ai
    ```
 
 2. Create and activate a virtual environment (optional but recommended):
    ```
    python -m venv venv
-   source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+   venv\Scripts\activate
+   source venv/bin/activate #linux use this
+   
    ```
 
 3. Install dependencies:
