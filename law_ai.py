@@ -26,11 +26,10 @@ api_key = st.secrets.get("GOOGLE_API_KEY")
 if not api_key:
     raise ValueError("Missing GOOGLE_API_KEY in Streamlit Secrets")
 #If Running in local Machine
-'''load_dotenv() 
-
-api_key = os.getenv("GOOGLE_API_KEY")
-if not api_key:
-    raise ValueError("Missing GOOGLE_API_KEY environment variable")'''
+#load_dotenv() 
+#api_key = os.getenv("GOOGLE_API_KEY")
+#if not api_key:
+  #  raise ValueError("Missing GOOGLE_API_KEY environment variable")
 
 # ✅ Configure Google Generative AI
 genai.configure(api_key=api_key)
